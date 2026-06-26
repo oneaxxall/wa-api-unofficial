@@ -1,6 +1,6 @@
-# WAUN (WhatsApp Unofficial) — Multi-Account WhatsApp Gateway
+# WhatsApp API Unofficial  — Multi-Account WhatsApp Gateway
 
-**WAUN** adalah WhatsApp Gateway unofficial untuk mengelola banyak akun WhatsApp sekaligus. Dengan WAUN, Anda bisa mengirim pesan, melakukan broadcast ke ribuan kontak, mengatur auto-reply, dan menerima webhook — semuanya melalui API REST yang sederhana.
+adalah WhatsApp Gateway unofficial untuk mengelola banyak akun WhatsApp sekaligus. Dengan WAUN, Anda bisa mengirim pesan, melakukan broadcast ke ribuan kontak, mengatur auto-reply, dan menerima webhook — semuanya melalui API REST yang sederhana.
 
 > ⚠️ **Disclaimer**: WAUN menggunakan library unofficial (`@whiskeysockets/baileys`) yang berinteraksi dengan WhatsApp Web. Penggunaan resiko ban akun tetap ada. Gunakan fitur anti-ban dengan bijak.
 
