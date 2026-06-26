@@ -1,0 +1,15 @@
+meta {
+  name: List Broadcasts
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{BASE_URL}}/broadcasts?page=1&limit=20
+  body: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{API_KEY}}
+}

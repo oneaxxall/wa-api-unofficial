@@ -1,0 +1,16 @@
+meta {
+  name: Get QR Code
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{BASE_URL}}/accounts/71558988-28e5-499d-97f8-e6a8db2fd47c/qr
+  body: none
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{API_KEY}}
+}

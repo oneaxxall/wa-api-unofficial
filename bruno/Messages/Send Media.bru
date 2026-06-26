@@ -1,0 +1,24 @@
+meta {
+  name: Send Media
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/send/media
+  body: json
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{API_KEY}}
+}
+
+body:json {
+  {
+    "accountId": "{{ACCOUNT_ID}}",
+    "to": "6281234567890",
+    "mediaUrl": "https://example.com/photo.jpg",
+    "caption": "Foto produk"
+  }
+}

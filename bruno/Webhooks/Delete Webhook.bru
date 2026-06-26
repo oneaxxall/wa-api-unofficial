@@ -1,0 +1,15 @@
+meta {
+  name: Delete Webhook
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{BASE_URL}}/accounts/135f615d-11e8-4981-9228-eb3c49f7927f/webhooks/84e6498b-9b20-489e-96f7-57f383201702
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{API_KEY}}
+}

@@ -1,0 +1,27 @@
+meta {
+  name: Send Text Message
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/send
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{API_KEY}}
+}
+
+body:json {
+  {
+    "accountId": "135f615d-11e8-4981-9228-eb3c49f7927f",
+    "to": "6287887140105",
+    "message": "Test 12345.",
+    "options": {
+      "simulateTyping": true
+    }
+  }
+}

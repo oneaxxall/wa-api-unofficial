@@ -1,0 +1,21 @@
+meta {
+  name: Create Account
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{BASE_URL}}/accounts
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "label": "Wahyu WhatsApp Business"
+  }
+}

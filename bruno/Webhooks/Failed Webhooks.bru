@@ -1,0 +1,16 @@
+meta {
+  name: Failed Webhooks
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{BASE_URL}}/accounts/135f615d-11e8-4981-9228-eb3c49f7927f/failed-webhooks
+  body: none
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{API_KEY}}
+}

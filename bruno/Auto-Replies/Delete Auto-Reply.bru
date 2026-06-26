@@ -1,0 +1,14 @@
+meta {
+  name: Delete Auto-Reply
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{BASE_URL}}/accounts/{{ACCOUNT_ID}}/auto-replies/{{RULE_ID}}
+  body: none
+}
+
+headers {
+  Authorization: Bearer {{API_KEY}}
+}

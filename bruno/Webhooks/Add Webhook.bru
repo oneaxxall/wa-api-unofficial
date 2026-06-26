@@ -1,0 +1,26 @@
+meta {
+  name: Add Webhook
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/accounts/135f615d-11e8-4981-9228-eb3c49f7927f/webhooks
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{API_KEY}}
+}
+
+body:json {
+  {
+    "url": "https://renovator-resume-fling.ngrok-free.dev/api/webhooks/whatsapp_unofficial/0071b3aa-255e-494f-90fc-eb293c8b12ff",
+    "headers": {
+      "x-webhook-secret": "32031dbcb51bb816023aa5e27befb5f7"
+    },
+    "timeout": 10000
+  }
+}

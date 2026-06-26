@@ -1,0 +1,21 @@
+meta {
+  name: Send Media (Upload)
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{BASE_URL}}/send/media
+  body: multipartForm
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{API_KEY}}
+}
+
+body:multipart-form {
+  accountId: {{ACCOUNT_ID}}
+  to: 087887140105
+  file: 
+}

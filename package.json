@@ -1,0 +1,38 @@
+{
+  "name": "pds-wa-unofficial",
+  "version": "2.0.0",
+  "description": "WAUN — Multi-Account WhatsApp Gateway with Broadcast, Webhook & Anti-Ban",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "pm2": "pm2 start ecosystem.config.js",
+    "pm2:stop": "pm2 stop pds-wa-unofficial",
+    "add-account": "node src/cli-add-account.js",
+    "list-accounts": "node src/cli-list-accounts.js"
+  },
+  "dependencies": {
+    "@fastify/cors": "^10.0.0",
+    "@fastify/multipart": "^10.0.0",
+    "@fastify/rate-limit": "^10.2.0",
+    "@fastify/swagger": "^9.7.0",
+    "@fastify/swagger-ui": "^5.2.6",
+    "@fastify/websocket": "^11.2.0",
+    "@whiskeysockets/baileys": "^7.0.0-rc13",
+    "axios": "^1.7.9",
+    "better-sqlite3": "^12.10.0",
+    "bullmq": "^5.77.6",
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.0",
+    "ioredis": "^5.11.0",
+    "pino": "^9.6.0",
+    "pino-pretty": "^13.0.0",
+    "qrcode": "^1.5.4",
+    "uuid": "^11.1.0"
+  },
+  "optionalDependencies": {
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.26.0"
+  }
+}

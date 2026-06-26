@@ -1,0 +1,44 @@
+# ============================================================
+# WAUN — WhatsApp Unofficial Gateway
+# Docker Compose — Baileys (default, tanpa Chrome)
+# Image size: ~200 MB, RAM: ~50 MB base + 5-10 MB per session
+# ============================================================
+# Usage:
+#   docker compose up -d        → Start WAUN in background
+#   docker compose down         → Stop WAUN
+#   docker compose logs -f      → Follow logs
+#   docker compose restart      → Restart
+#
+# Untuk whatsapp-web.js (WA_LIBRARY=wwebjs):
+#   Butuh Chrome di Dockerfile + cap_add SYS_ADMIN
+# ============================================================
+
+services:
+  waun:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: waun
+    restart: unless-stopped
+    ports:
+      - "3008:3008"
+    volumes:
+      - ./sessions:/app/sessions
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./storage:/app/storage
+    env_file:
+      - .env
+    environment:
+      - WA_LIBRARY=baileys
+      - HOST=0.0.0.0
+      - DB_PATH=/app/data/waun.db
+      - SESSION_DIR=/app/sessions
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3008/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s

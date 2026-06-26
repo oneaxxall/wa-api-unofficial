@@ -1,0 +1,19 @@
+meta {
+  name: Quick QR (Generate)
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{BASE_URL}}/accounts/qr
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {}
+}

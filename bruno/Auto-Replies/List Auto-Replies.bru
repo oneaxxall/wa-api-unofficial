@@ -1,0 +1,15 @@
+meta {
+  name: List Auto-Replies
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{BASE_URL}}/accounts/{{ACCOUNT_ID}}/auto-replies
+  body: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{API_KEY}}
+}

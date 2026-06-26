@@ -1,0 +1,50 @@
+# ============================================================
+# WAUN — Docker ignore rules
+# File & folder yang gak perlu di-copy ke Docker image
+# ============================================================
+
+# Dependencies — di-install ulang di container via npm ci
+node_modules
+npm-debug.log
+
+# Version control — gak perlu di container
+.git
+.gitignore
+.gitattributes
+
+# Session data — mount dari host, jangan di-copy ke image
+sessions
+data
+
+# Logs — mount atau stdout, gak perlu di image
+logs
+*.log
+
+# Environment — .env dibaca via env_file di docker-compose
+.env
+.env.example
+
+# Docs & notes — gak perlu di production image
+docs
+todo
+README.md
+*.md
+
+# IDE & OS files
+.idea
+.vscode
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Docker files — gak perlu di-copy ke dalam image
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Config files — gak perlu
+ecosystem.config.js
+push
+install.sh

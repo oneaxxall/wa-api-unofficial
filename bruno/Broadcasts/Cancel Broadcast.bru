@@ -1,0 +1,15 @@
+meta {
+  name: Cancel Broadcast
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{BASE_URL}}/broadcast/{{BROADCAST_ID}}/cancel
+  body: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{API_KEY}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Get Broadcast
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{BASE_URL}}/broadcast/{{BROADCAST_ID}}
+  body: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{API_KEY}}
+}

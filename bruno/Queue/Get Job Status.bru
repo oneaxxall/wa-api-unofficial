@@ -1,0 +1,14 @@
+meta {
+  name: Get Job Status
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{BASE_URL}}/queue/jobs/{{JOB_ID}}
+  body: none
+}
+
+headers {
+  Authorization: Bearer {{API_KEY}}
+}

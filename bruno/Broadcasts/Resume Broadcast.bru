@@ -1,0 +1,15 @@
+meta {
+  name: Resume Broadcast
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{BASE_URL}}/broadcast/{{BROADCAST_ID}}/resume
+  body: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{API_KEY}}
+}

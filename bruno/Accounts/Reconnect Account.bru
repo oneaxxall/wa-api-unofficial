@@ -1,0 +1,21 @@
+meta {
+  name: Reconnect Account
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{BASE_URL}}/accounts/{{ACCOUNT_ID}}/reconnect
+  body: json
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{API_KEY}}
+}
+
+body:json {
+  {
+    "label": "My WhatsApp (Reconnect)"
+  }
+}

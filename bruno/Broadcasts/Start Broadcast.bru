@@ -1,0 +1,33 @@
+meta {
+  name: Start Broadcast
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/broadcast
+  body: json
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{API_KEY}}
+}
+
+body:json {
+  {
+    "accountId": "{{ACCOUNT_ID}}",
+    "name": "Promo Akhir Tahun",
+    "message": "Halo {{name}}, ada promo spesial buat kamu!",
+    "contacts": [
+      {"phone": "6281234567890", "name": "Budi"},
+      {"phone": "6289876543210", "name": "Siti"}
+    ],
+    "options": {
+      "batchSize": 10,
+      "batchDelay": 60000,
+      "shuffle": true,
+      "simulateTyping": true
+    }
+  }
+}

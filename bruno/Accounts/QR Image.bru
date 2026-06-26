@@ -1,0 +1,20 @@
+meta {
+  name: QR Image (raw PNG)
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{BASE_URL}}/accounts/71558988-28e5-499d-97f8-e6a8db2fd47c/qr?format=image
+  body: none
+  auth: none
+}
+
+params:query {
+  format: image
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{API_KEY}}
+}

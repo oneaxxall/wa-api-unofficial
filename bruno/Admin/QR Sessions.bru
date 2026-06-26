@@ -1,0 +1,14 @@
+meta {
+  name: QR Sessions
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{BASE_URL}}/admin/qr-sessions
+  body: none
+}
+
+headers {
+  Authorization: Bearer {{API_KEY}}
+}

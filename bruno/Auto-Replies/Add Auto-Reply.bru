@@ -1,0 +1,26 @@
+meta {
+  name: Add Auto-Reply
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/accounts/{{ACCOUNT_ID}}/auto-replies
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{API_KEY}}
+}
+
+body:json {
+  {
+    "keyword": "hoi",
+    "reply": "Halo {{senderName}}! Ada yang bisa dibantu (WAUN)?",
+    "matchType": "contains",
+    "enabled": true,
+    "cooldown": 30
+  }
+}
