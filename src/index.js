@@ -93,7 +93,7 @@ await app.register(swagger, {
   openapi: {
     info: {
       title: 'WAUN API',
-      description: 'WhatsApp Unofficial Gateway — Multi-Account WhatsApp API dengan broadcast, webhook, auto-reply, dan anti-ban engine.\n\nManaged by **Peranti Digital Solusindo**.',
+      description: 'WhatsApp Unofficial Gateway — Multi-Account WhatsApp API dengan broadcast, webhook, auto-reply, dan anti-ban engine.\n\nManaged by **oneaxxall**.',
       version: '2.0.0',
     },
     servers: [{ url: `http://localhost:${PORT}`, description: 'Development server' }],
